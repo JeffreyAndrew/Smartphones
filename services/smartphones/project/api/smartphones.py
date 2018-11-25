@@ -93,4 +93,3 @@ def index():
         db.session.commit()
     smartphones = Smartphone.query.all()
     return render_template('index.html', smartphones=smartphones)
-    
