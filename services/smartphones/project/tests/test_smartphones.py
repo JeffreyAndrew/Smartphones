@@ -6,6 +6,7 @@ from project.tests.base import BaseTestCase
 from project import db
 from project.api.models import Smartphone
 
+
 def add_smartphone(name, brand, price):
     smartphone = Smartphone(name=name, brand=brand, price=price)
     db.session.add(smartphone)
@@ -123,7 +124,7 @@ class TestSmartphoneService(BaseTestCase):
             self.assertEqual(response.status_code, 404)
             self.assertIn('El smartphone no existe', data['mensaje'])
             self.assertIn('falló', data['estado'])
-    
+
     def test_single_smartphone_incorrect_id(self):
         """Asegurando de que se lanze un error si el id no existe."""
         with self.client:
@@ -174,7 +175,7 @@ class TestSmartphoneService(BaseTestCase):
         with self.client:
             response = self.client.post(
                 '/',
-                data=dict(name='Prueba01', brand="marca01" , price=100),
+                data=dict(name='Prueba01', brand="marca01", price=100),
                 follow_redirects=True
             )
             self.assertEqual(response.status_code, 200)
