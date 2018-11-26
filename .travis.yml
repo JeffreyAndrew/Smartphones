@@ -13,5 +13,3 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
 
-after_script:
-  - docker-compose -f docker-compose-dev.yml down
