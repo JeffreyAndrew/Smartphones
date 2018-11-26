@@ -1,4 +1,3 @@
-
-$  docker-compose  -f docker-compose-dev.yml up -d --build
-
-docker-compose -f docker-compose-dev.yml run users python manage.py recreate_db
+#Microservicios con Flask y docker
+#add
+[![Build Status](https://travis-ci.org/JeffreyAndrew/Smartphones.svg?branch=master)](https://travis-ci.org/JeffreyAndrew/Smartphones)
